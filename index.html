@@ -1,27 +1,248 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <title>Twiddler</title>
   </head>
-  <body>
+  <body style="background-color: rgba(200,200,200,0.8)">
+
+    <!-- navigation navbar -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark " style="background-color: #40343a; height: 56px">
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="neuraLink.jpg" width="100" height="25" alt="">
+        </a>
+      </nav>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold " href="#"><i class="fas fa-robot"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold " href="#"><i class="fas fa-bolt"></i> Moments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold " href="#"><i class="far fa-bell"></i> Notifications</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link font-weight-bold " href="#"><i class="far fa-envelope"></i> Messages</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 text-center" type="search" placeholder="SEARCH NEURALINK" aria-label="Search">
+          <button class="btn btn-light btn-sm font-weight-bold" style= "margin-right: 5px" type="submit">SEARCH</button>
+          <span style="font-size: 48px; color: white">
+            <i class="fas fa-user-circle"></i>
+          </span>
+          <button type="button" class="btn btn-light btn-sm font-weight-bold" style="margin-left: 5px">TWEET</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- three column grid left column -->
+    <div class="container">
+      <div class="row">
+        <div class="col text-center" style="margin:10px 10px 0px 0px; background-color: #40343a; height: 1000px">
+          <img src="elon.jpeg" alt="..." class="rounded-circle border-dark mt-5">
+          <p class='ml-4 mb-0 text-light'>Elon Muskinator</p>
+          <p class='font-weight-bold ml-5 mt-0 text-light'>  @the_muskinator</p><br>
+          <table style="width:100%; color:white">
+            <tr>
+              <th>Tweets</th>
+              <th>Followers</th> 
+            </tr>
+            <tr>
+              <td>243,232</td>
+              <td>124,343</td> 
+            </tr>
+          <h3 class="text-light">Trends for you</h3>
+          </table>
+            <ul class="list-group" style="width: 100%">
+              <li class="list-group-item list-group-item-dark">
+                <p class='text-light text-center mb-0 mt-0 font-weight-bold'>#eloninator</p>
+                <p class='text-light text-center mb-0 mt-0'>The singlarity</p>
+              </li>
+              <li class="list-group-item">
+                <p class='text-dark text-center mb-0 mt-0 ml-4 font-weight-bold'>#triedtowarnyouall</p>
+                <p class='text-dark text-center mb-0 mt-0 ml-4'>Artificial intelligence</p>
+              </li>
+              <li class="list-group-item">
+                <p class='text-dark text-center mb-0 mt-0 ml-4 font-weight-bold'>#robotics</p>
+                <p class='text-dark text-center mb-0 mt-0 ml-4'>Robots that do human things</p>
+              </li>
+              <li class="list-group-item">
+                <p class='text-dark text-center mb-0 mt-0 ml-4 font-weight-bold'>#neural networks</p>
+                <p class='text-dark text-center mb-0 mt-0 ml-4'>The future of machine learning</p>
+              </li>
+              <li class="list-group-item">
+                <p class='text-dark text-center mb-0 mt-0 ml-4 font-weight-bold'>#humansvscomputers</p>
+                <p class='text-dark text-center mb-0 mt-0 ml-4'>Will they work with us or against us</p>
+              </li>
+              <li class="list-group-item">
+                <p class='text-dark text-center mb-0 mt-0 ml-4 font-weight-bold'>#limbicsystem</p>
+                <p class='text-dark text-center mb-0 mt-0 ml-4'>Not yet, but soon!</p>
+              </li>
+            </ul>
+        </div>
+
+        <!-- middle column -->
+        <div class="col-5 text-center" style=" margin-top: 10px; background-color: #40343a">
+          <ul class="list-group" style="width: 100%; background-color: #40343a; padding-top: 20px">
+            <li class="list-group-item list-group-item-dark">
+
+              <div class="input-group mb-3" style="padding-top: 15px">
+                <input type="text" id='input' class="form-control" placeholder="What's Happening?" aria-label="new-tweet" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Post</button>
+                </div>
+              </div>
+        <div >
+          <button type="button" id='whats-new' class="btn btn-dark btn-sm font-weight-bold">New Posts</button>
+        </div>
+            </li>
+          </ul>
+          <ul class="list-group" id='feed'></ul>
+
+        </div>
+
+        <!-- right column -->
+        <div class="col text-center mh-50 " style="margin: 10px 0px 0px 10px; background-color: #40343a; height: 1000px" alt="Max-height 25 %">
+            <br>
+            <h3 class="text-light">Who to follow</h3><br>
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-dark">
+                <h5>Tesla</h5>
+                 <button type="button" class="btn btn-light btn-sm font-weight-bold">Follow</button>
+              </li>
+              <li class="list-group-item">
+                <h5>Boston Dynamics</h5>
+                 <button type="button" class="btn btn-dark btn-sm font-weight-bold">Follow</button>
+              </li>
+              <li class="list-group-item">
+                  <h5>OpenAI</h5>
+                  <button type="button" class="btn btn-dark btn-sm font-weight-bold">Follow</button>
+              </li>
+              <li class="list-group-item">
+               <h5>IBM Watson</h5>
+                 <button type="button" class="btn btn-dark btn-sm font-weight-bold">Follow</button>
+              </li>
+              <li class="list-group-item">
+                <h5>Alphabet</h5>
+                 <button type="button" class="btn btn-dark btn-sm font-weight-bold">Follow</button>
+              </li>              
+              <li class="list-group-item">
+                <h5>Google</h5>
+                 <button type="button" class="btn btn-dark btn-sm font-weight-bold">Follow</button>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
+    $(document).ready(function(){
+        var $feed = $('#feed')
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+        //format time 
+        var timeStamp = function(tweetTime) {
+          var h = addZero(tweetTime.getHours());  
+          var m = addZero(tweetTime.getMinutes());
+          var s = addZero(tweetTime.getSeconds());
+          h = formatTimeStampHours(h)
+          var amPM = amPm(h);
+          return h + ":" + m + ":" + s + " " + amPM;
+        }
+        
+        //helper function to format timestamp
+        function addZero(i) {
+          if (i < 10) {
+            i = "0" + i;
+          }
+          return i;
+        }
 
-        var index = streams.home.length - 1;
+        function  formatTimeStampHours(i) {
+          if (i >= 12) {
+            return i % 12;        
+        } 
+        return i;
+        }
+
+        //format amPm
+        function amPm(i) {
+         var amPm = 'AM';
+         if (i >= 12) {
+          return amPm;
+         }
+         return 'PM'
+        }
+
+        
+        //feed automatically loaded when page loads
+        let index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          var tweetTime = streams.home[index].created_at;
+          // var $tweet = $('<div></div>');
+          // $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $("#feed").append('<li class="list-group-item lis" id='+ tweet.user + '>@<strong>' + tweet.user + '</strong><small>      -' + ' ' + timeStamp(tweetTime) + '</small><br>' + tweet.message + '</li>');
           index -= 1;
         }
+        //refresh feed click event 
+        $('#whats-new').click(function() {
+        var index = 11
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var tweetTime = streams.home[index].created_at;
+          $("#feed").prepend('<li class="list-group-item" id='+ tweet.user + '>@<strong>' + tweet.user + '</strong><small>      -' + ' ' + timeStamp(tweetTime) + '</small><br>' + tweet.message + '</li>');
+          index += 1;
+        }
+        })
+
+        //add user input to feed
+        $('#button-addon2').click(function() {
+          var input = $('#input').val();
+          var tweetTime = new Date()
+          if(input.length < 1) {
+            alert('Please Enter Your Messege!');
+            } else {
+            $('#feed').prepend('<li class="list-group-item" id="johnSprague">@<strong>elon_muskinator' + '</strong><small>      -' + ' ' + timeStamp(tweetTime) + '</small><br>' + input + '</li>');
+            $('#input').val('');
+            }
+        }); 
+
+        //when user clickes on the user or their tweet, then display only their tweets. 
+        // show / hide users timeline
+        $('#feed').on('click', 'li', function() {
+          user = $(this).attr('id');
+          $('.lis').not('li:contains("' + user + '")').hide(200);
+          $('li:contains("' + user + '")').show(200);
+        });
 
       });
 
     </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
